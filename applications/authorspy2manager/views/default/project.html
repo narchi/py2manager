@@ -1,0 +1,17 @@
+{{extend 'layout.html'}}
+<h2>Project Details</h2>
+<br/>
+<p>
+	<strong>Project Name: </strong>{{=project.name}}<br/>
+	<strong>Due Date: </strong>{{=project.due_date.strftime('%m-%d-%Y')}}{{pass}}<br/>
+	<strong>Description: </strong>{{=project.description}}{{pass}}<br/>	
+</p>
+<h4>Project Notes</h4>
+{{for note in all_notes:}}
+	<ul>
+		<li>{{=db.auth_user[note.created_by].first_name}} on {{=note.created_on.strftime('%m-%d-%Y')}}
+          - {{=note.post}}</li>
+    </ul>
+{{pass}}
+<h4>Add a note</h4>
+{{=form}}</br>
