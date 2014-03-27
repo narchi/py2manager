@@ -74,3 +74,12 @@ CREATE TABLE project(
     completed CHAR(1) NOT NULL
 );
 success!
+timestamp: 2014-03-26T11:50:56.603501
+ALTER TABLE auth_user ADD city CHAR(512);
+timestamp: 2014-03-26T11:50:56.606249
+ALTER TABLE auth_user ADD zip CHAR(512);
+timestamp: 2014-03-26T11:50:56.607200
+ALTER TABLE auth_user ADD image CHAR(512);
+timestamp: 2014-03-26T11:50:56.609260
+ALTER TABLE auth_user ADD address CHAR(512);
+success!
